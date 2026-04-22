@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linmix"
+version = "1.0.0-alpha"
+description = "A hierarchical Bayesian approach to linear regression with errors in both X and Y"
+readme = "README.md"
+license = {text = "BSD"}
+authors = [
+    {name = "Joshua E. Meyers", email = "jmeyers314@gmail.com"},
+    {name = "Brandon C. Kelly", email = "bcharleskelly@gmail.com"},
+]
+keywords = ["fit", "bayesian", "statistics", "regression", "linear", "mcmc"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.20"]
+
+[project.urls]
+Homepage = "https://github.com/jmeyers314/linmix_py"
+Documentation = "https://linmix.readthedocs.io/en/latest/"
+Repository = "https://github.com/jmeyers314/linmix_py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["linmix*"]
+
+[tool.setuptools.package-data]
+linmix = ["*.py"]
